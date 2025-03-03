@@ -1,0 +1,236 @@
+{
+  "messages": [
+    {
+      "sender": "Riya",
+      "content": "Min, saya kesepian nih karena sulit berteman karena takut tertolak, tolong saya?"
+    },
+    {
+      "sender": "Agent",
+      "content": " Assalamualaikum, terimakasih sudah kirim pesan. Sebelumnya boleh tau Namanya siapa dan usia brp nih? Ngmg\" kalau boleh tau apa yg membuat saudara sulit berteman dan takut tertolak? boleh diceritakan."
+    },
+    {
+      "sender": "Riya",
+      "content": "Riya umur 21,aku introfet  susah bergaul dan aku menutupinya dengan penampilan baik"
+    },
+    {
+      "sender": "Agent",
+      "content": " Salam kenal yah Riya, perkenalkan saya dengan Mba Viki."
+    },
+    {
+      "sender": "Agent",
+      "content": " Mksdnya menutupi dengan penampilan bagaimana Riya?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Dengat aku berpenampilan  lebih baik bisa menutupi semua rasa takut ku tentang mereka yang hanya membutuhkan ku di saat di butuhkan saja"
+    },
+    {
+      "sender": "Agent",
+      "content": " Riya maaf saya baru bls pesannya yah, Kalau boleh tau kenapa kamu merasa temanmu hanya mau berteman Ketika ada butuhnya saja?"
+    },
+    {
+      "sender": "Agent",
+      "content": " Owh ya kamu tinggal dimana nih?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Entah perasanku saja mengatakan begitu"
+    },
+    {
+      "sender": "Riya",
+      "content": "Jawa"
+    },
+    {
+      "sender": "Agent",
+      "content": " Lalu kalau boleh tau harapan Riya apa nih?"
+    },
+    {
+      "sender": "Agent",
+      "content": " kamu tinggal di jawa mana nih?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Aku mau jadi orang yang berguna,dan selalu nenaati ajaran islam"
+    },
+    {
+      "sender": "Agent",
+      "content": " Selama ini apa yg sudah kamu lakukan agar bisa menjadi org yg berguna dan menaati agama?"
+    },
+    {
+      "sender": "Agent",
+      "content": " Owh ya kegiatan sehari-hari kamu apa Riya?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Melakukan apa yang berguna untuk hidup ku"
+    },
+    {
+      "sender": "Riya",
+      "content": "Tpi kadang aku merasa kesepian  kayak gaada gunanya aku di dunia"
+    },
+    {
+      "sender": "Agent",
+      "content": " memang kalau boleh tau kegiatan kamu apa Riya?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Ya cuma kegiatan amal ,jumat berkah dll cuma itu"
+    },
+    {
+      "sender": "Agent",
+      "content": " Kamu blm bekerja yah Riya?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Kuliah aku"
+    },
+    {
+      "sender": "Riya",
+      "content": "Maaf ya kadang bahasaku agak aneh , aku binggu mau ngomong apa dan mulai dari mna"
+    },
+    {
+      "sender": "Agent",
+      "content": " Riya, apakah kamu pernah dengar tentang Isa Al-Masih yg bisa memberikan masa depan yg terbaik dan menolong manusia gar doanya di dengar dan di ijabah oleh Allah?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Kayaknya pernah dengar"
+    },
+    {
+      "sender": "Agent",
+      "content": " Begini Riya,Isa Al-Masih adl Pribadi yg berkuasa menolong memberikan masa depan yg terbaik dan memberi jaminan memelihara umat manusia yg memohon pertolongan kepada-Nya. Maka dr itu benar yg IA katakan tertulis di Kitab Injil, Allah itu dekat kepada orang-orang yang patah hati dan ia menyelamatkan orang-orang yg remuk jiwanya.. Gimana perasaan kamu mendengar ttg Isa Al-Masih?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Beliau nabi  yang hebat dan mulia tapi itu sangat berbedaan kebanyakan  manusia sekarang yang kadang jarang mendekatkan diri pada tuhan"
+    },
+    {
+      "sender": "Agent",
+      "content": " Riya, Isa Al-Masih lebih dari seorang nabi, Isa Al-Masih yg dpt memberikan petunjuk menjalani hidup yg membawa ketenangan hati. Apa Riya tertarik mau tau tentang Isa Al-Masih lebih lanjut dari kitab Injil Allah yg dpt memberikan petunjuk menjalani hidup? Owh ya ngmg\" disana kamu tinggal dikecamatan apa nih?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Ohhh gitu"
+    },
+    {
+      "sender": "Agent",
+      "content": " Riya, kalau boleh tau disana kamu tinggal dikecamatan apa nih?"
+    },
+    {
+      "sender": "Agent",
+      "content": " Apa Riya tertarik mau tau tentang Isa Al-Masih lebih lanjut dari kitab Injil Allah yg dpt memberikan petunjuk menjalani hidup?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Udanawu"
+    },
+    {
+      "sender": "Riya",
+      "content": "Maaf tapi masih belum ingin mengenal kitap injil allah"
+    },
+    {
+      "sender": "Agent",
+      "content": " Bukan mengenal Kitab Inji Allah nya riya, tapi mengenal Isa Al-Masih yg memberikan petunjuk menjalani hidup dan berkuasa menolong manusia agar doanya di dengar dan di ijabah oleh Allah menurut Kitab Injil Allah. Sebagaimana disebutkan di dalam rukun iman ketiga bahwa kita hrs beriman kepada kitab-kitab Allah kan Riya? dan tdk sah iman kita jika tdk mengimaninya, gimana menurut Ria?"
+    },
+    {
+      "sender": "Agent",
+      "content": " Kan dengan mengetahui tentang Isa Al-Masih juga akan menambah wawasan untuk riya akan Allah juga lho."
+    },
+    {
+      "sender": "Riya",
+      "content": "Boleh kak"
+    },
+    {
+      "sender": "Agent",
+      "content": " Alhamdulillah, mengingat disini sangatlah terbatas dan supaya lebih enak ngbrl byk tentang Isa Al-Masih, bagaimana kalau saya kenalin dengan teman saya disana untuk bertemu dan ngbrl secara langsung apakah kamu mau? Kalau mau saya kasih no kamu ke teman saya disana."
+    },
+    {
+      "sender": "Riya",
+      "content": "Boleh"
+    },
+    {
+      "sender": "Agent",
+      "content": " Baik sebelumnya, Riya di udanawu blitar kan yah?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Iya tpi aku kuliah di tulungagung jadi jarang pulang"
+    },
+    {
+      "sender": "Agent",
+      "content": " Owh gtu di tulungagung itu kamu di kecamatan tulungagungnya bukan?"
+    },
+    {
+      "sender": "Agent",
+      "content": " Gtu yah Riya gpp koq nanti kan bisa bertemu di tulunggung aja, yg pasti nanti tdk mengganggu aktifitas kamu koq."
+    },
+    {
+      "sender": "Riya",
+      "content": "Kakak itu orang mna"
+    },
+    {
+      "sender": "Agent",
+      "content": " Kalau saya tinggal jauh dr kamu, saya dr Sumatra Riya."
+    },
+    {
+      "sender": "Riya",
+      "content": "Wow  jauh sekali"
+    },
+    {
+      "sender": "Riya",
+      "content": "Salam kenal aku riya dari uin satu"
+    },
+    {
+      "sender": "Agent",
+      "content": " Iya Riya, tp walau jauh kita tetep bisa silaturahmi lewat chat koq Riya."
+    },
+    {
+      "sender": "Agent",
+      "content": " Salam kenal Riya saya dengan Mba Viki."
+    },
+    {
+      "sender": "Riya",
+      "content": "Iya .. kalau boleh tau nama kakak siapa"
+    },
+    {
+      "sender": "Agent",
+      "content": " Owh ya riya jadi ini apakah benar? kamu disana di kecamatan tulungagung yah?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Tidak tulungagung  itu kota bukan kecamatan"
+    },
+    {
+      "sender": "Agent",
+      "content": " Owh gtu, jadi disana kamu tinggal dikecamatan apa Riya?"
+    },
+    {
+      "sender": "Agent",
+      "content": " Semangat terus kuliahnya Riya, semoga lancer terus kuliahnya dan bisa menjadi kebanggan ortu, amin."
+    },
+    {
+      "sender": "Riya",
+      "content": "Kedungwaru"
+    },
+    {
+      "sender": "Riya",
+      "content": "Aminnn"
+    },
+    {
+      "sender": "Agent",
+      "content": " Berati kamu asli suku jawa yah Riya?"
+    },
+    {
+      "sender": "Riya",
+      "content": "Iya"
+    },
+    {
+      "sender": "Agent",
+      "content": " Baik Riya terimakasih untuk waktunya, senang bisa kenal dengan kamu. Ditunggu nanti teman saya disana menghubungi kamu yah. Semangat terus kuliahnya, sehat selalu yah."
+    },
+    {
+      "sender": "Riya",
+      "content": "Iya kak viki"
+    }
+  ]
+}
