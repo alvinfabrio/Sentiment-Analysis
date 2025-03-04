@@ -84,7 +84,7 @@ df = pd.read_csv("cleaned_chatlogs.csv")
 # Label each message with a delay to help manage rate limits
 df['label'] = df['message'].apply(lambda m: (time.sleep(1) or label_message(m)))
 
-# Save the message-level labeled data (optional)
+
 df.to_csv("labeled_chatlogs.csv", index=False)
 print("Message-level labeling complete and saved to 'labeled_chatlogs.csv'.")
 
