@@ -1,83 +1,46 @@
-# import openai
-# import pandas as pd
-# import os
-# from dotenv import load_dotenv
 
-# # Load environment variables from .env file
-# load_dotenv()
 
-# # Get API key from environment variable
-# openai.api_key = os.getenv("OPENAI_API_KEY")  # Ensure your .env file contains OPENAI_API_KEY
-
-# # Load the cleaned chat messages
-# df = pd.read_csv("cleaned_chatlogs.csv")
-
-# # Function to classify messages using GPT-4 (Updated for openai>=1.0.0)
-# def classify_message(message):
-#     client = openai.OpenAI()  # New OpenAI client instance
-#     response = client.chat.completions.create(
-#         model="gpt-4-turbo",
-#         messages=[
-#             {"role": "system", "content": "Classify the following message into one of three categories: 'Open', 'Neutral', or 'Not Open' regarding openness to Christianity."},
-#             {"role": "user", "content": message}
-#         ]
-#     )
-#     return response.choices[0].message.content
-
-# # Classify all messages
-# df["label"] = df["message"].apply(classify_message)
-
-# # Save labeled messages
-# df.to_csv("labeled_chatlogs.csv", index=False)
-
-# print("Labeled chat logs saved to 'labeled_chatlogs.csv'.")
 import os
 import time
 import pandas as pd
 import openai
-from openai import OpenAIError  # Import generic OpenAIError
+from openai import OpenAIError  
 from collections import Counter
 from dotenv import load_dotenv
 
-# Attempt to import RateLimitError; if not available, use OpenAIError
 try:
     from openai.error import RateLimitError
 except ModuleNotFoundError:
     RateLimitError = OpenAIError
 
-# Load your API key from .env
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 def label_message(message):
     max_retries = 3
-    base_delay = 4  # Increase base delay
+    base_delay = 4  
     for attempt in range(max_retries):
         try:
             response = openai.ChatCompletion.create(
                 model="gpt-4-turbo",
                 messages=[
-                    {
-                        "role": "system",
-                        "content": (
-                            "Label the following message as either 'Open', 'Neutral', or 'Not Open' "
-                            "regarding openness to Christianity."
-                        )
-                    },
+                    {"role": "system", "content": (
+                        "Label the following message as either 'Open', 'Neutral', or 'Not Open' "
+                        "regarding openness to Christianity."
+                    )},
                     {"role": "user", "content": message}
                 ]
             )
             return response.choices[0].message.content.strip()
         except RateLimitError:
-            wait_time = base_delay * (2 ** attempt)  # 4, 8, 16 seconds delay
+            wait_time = base_delay * (2 ** attempt)
             print(f"Rate limit reached while labeling message. Retrying in {wait_time} seconds...")
             time.sleep(wait_time)
         except Exception as e:
             print(f"Error labeling message: {e}")
             return "Error"
     return "Error"
-
-# Optionally, if you're processing many messages in a loop,
-# add a small sleep between each call to reduce overall request rate.
-df['label'] = df['message'].apply(lambda m: (time.sleep(0.5) or label_message(m)))
-
 
 def label_conversation(transcript):
     max_retries = 3
@@ -86,13 +49,10 @@ def label_conversation(transcript):
             response = openai.ChatCompletion.create(
                 model="gpt-4-turbo",
                 messages=[
-                    {
-                        "role": "system",
-                        "content": (
-                            "Label the following conversation as either 'Open', 'Neutral', or 'Not Open' "
-                            "regarding openness to Christianity."
-                        )
-                    },
+                    {"role": "system", "content": (
+                        "Label the following conversation as either 'Open', 'Neutral', or 'Not Open' "
+                        "regarding openness to Christianity."
+                    )},
                     {"role": "user", "content": transcript}
                 ]
             )
@@ -117,26 +77,26 @@ def majority_vote(labels):
         return most_common
     return None
 
-# --- Step 1: Message-Level Labeling ---
-# Load your cleaned CSV that contains 'conversation_id' and 'message' columns
+
+# Load cleaned CSV that contains 'conversation_id' and 'message' columns
 df = pd.read_csv("cleaned_chatlogs.csv")
 
-# Label each message using GPT-4
-df['label'] = df['message'].apply(label_message)
+# Label each message with a delay to help manage rate limits
+df['label'] = df['message'].apply(lambda m: (time.sleep(1) or label_message(m)))
 
 # Save the message-level labeled data (optional)
 df.to_csv("labeled_chatlogs.csv", index=False)
 print("Message-level labeling complete and saved to 'labeled_chatlogs.csv'.")
 
-# --- Step 2: Hybrid Aggregation to Conversation-Level ---
+
 # Group messages by conversation_id
 grouped = df.groupby("conversation_id")
 conversation_results = []
 
 for conv_id, group in grouped:
-    # Combine all messages for the conversation into one transcript
+    
     transcript = " ".join(group["message"].tolist())
-    # Get all message-level labels for this conversation
+ 
     message_labels = group["label"].tolist()
     
     # Determine conversation sentiment via majority vote
@@ -153,7 +113,7 @@ for conv_id, group in grouped:
         "num_messages": len(group)
     })
 
-# Create a DataFrame for conversation-level results and save to CSV
+
 conversation_df = pd.DataFrame(conversation_results)
 conversation_df.to_csv("conversation_level_sentiment.csv", index=False)
 print("Conversation-level sentiment saved to 'conversation_level_sentiment.csv'.")

@@ -34,6 +34,7 @@ def aggregate_chatlogs(path_pattern):
     return master_df
 
 # Usage:
-chatlogs_df = aggregate_chatlogs(r"C:\Users\alvin\OneDrive\Desktop\Sentiment Analysis Test\Data Sample\*.json")
+chatlogs_df = aggregate_chatlogs(r"C:\Users\alvin\OneDrive\Desktop\Sentiment-Analysis\Data Sample\*.json")
 chatlogs_df.to_csv("cleaned_chatlogs.csv", index=False)
 print("Cleaned chat logs saved to 'cleaned_chatlogs.csv'.")
+
